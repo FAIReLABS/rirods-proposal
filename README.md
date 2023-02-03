@@ -1,8 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# uu-proposal
+# Proposal for a pure R client for iRODS
 
-**Package name:** rirods2
+**Package name:** rirods
 
-This a proposal for the uu
+This a proposal for the development of a pure R Client for iRODS.
+
+See for the current state of the package:
+<https://github.com/irods/irods_client_library_rirods>.
+
+<div>
+<a href="https://www.youtube.com/watch?v=tZbWstlXKzE"><img width="140px" src="https://i.ytimg.com/vi/tZbWstlXKzE/hqdefault_12866.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIGUoZTAP&rs=AOn4CLAmEk2OnOalir9K4oBq90LwYutNGw"></a>
+</td>
+<td>
+<a href="https://www.youtube.com/watch?v=tZbWstlXKzE"> TRiRODS: rirods:
+A first release of a pure R package for iRODS</a> (Dec 2022, Chapel
+Hill, US)<br/>
+</div>

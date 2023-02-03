@@ -5,7 +5,7 @@ author: Martin Schobben
 date: "`r Sys.Date()`"
 output: bookdown::pdf_book
 urlcolor: blue
-bibliography: ["proposal/uu-proposal.bib", "proposal/packages.bib"]
+bibliography: ["proposal/proposal.bib", "proposal/packages.bib"]
 ---
 
 ```{r setup, eval=TRUE, results='hide', echo=FALSE}
