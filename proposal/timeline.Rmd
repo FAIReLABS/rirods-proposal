@@ -2,7 +2,7 @@
 
 ## Start-up phase {#sec:Start}
 
-The development of *rirods2* is a central part of broadening the user base of iRODS and facilate for data magement tools for the UU. Thus *rirods2* is meant to be conducive to innovation within an acadamic environment, and foster inclusiveness through open science. In turn, package development encompasses soliciting specific use-cases from the R community and laboratory facilities. A close collaboration with the Department of Earth Sciences, Utrecht University (UU), the Netherlands, and their analytical laboratory infrastructure, is already foreseen. Nonetheless, the development will benefit from having a good overview of the types of data and data models produced by analytical equipment in a range of laboratories. We will opt for an [MIT license](https://opensource.org/licenses/MIT) and a code of conduct, which will follow the [Contributor Covenant](https://www.contributor-covenant.org/) guide lines. Combined this ensures that contributions to the package can be done in a safe, inclusive, welcoming, and harassment-free environment conducive for collaborative package development, and ensuring down-stream re-usage of the developed software. Reporting of the progress of the project to both (lab-)users and developers will help ensure that we stay on track and thus develop a solution that has a broad future implementation.
+The development of *rirods* will lower the technical barriers of implementing iRODS data management capabilities as and integral part of R data analysis workflows. Thus *rirods* is meant to be conducive to innovation and foster inclusiveness through open practices in e.g., science. In turn, R package development encompasses soliciting specific use-cases from the R community at large and institute-specific use cases to optimize the design. A close collaboration with the Online Research Labs, Data Management, Utrecht University (UU), the Department of Geodesy and Geoinformation at the Technical University of Vienna, the National Institute for Public Health and the Environment of the Netherlands, and the Wageningen University & Research is already foreseen. Nonetheless, the development will benefit from having a good overview of the types of data and data models produced by analytical equipment in a range of academic, governmental and industrial settings. We will opt for an [MIT license](https://opensource.org/licenses/MIT) and a code of conduct, which will follow the [Contributor Covenant](https://www.contributor-covenant.org/) guide lines. Combined this ensures that contributions to the package can be done in a safe, inclusive, welcoming, and harassment-free environment conducive for collaborative package development, and ensuring down-stream re-usage of the developed software. Reporting of the progress of the project to both users and developers will help ensure that we stay on track and thus develop a solution that has a broad future implementation.
 
 <!-- The licensing could possibly constrain the integration of some C++ libraries.  -->
 
@@ -18,41 +18,31 @@ Covering the planning phase, this section should provide a relatively detailed p
 
 ## Technical delivery {#sec:Technical}
 
-The duration of the project will be 12 months. The "**deliverable**" gives a convenient measure of project's progress.
+The duration of the project will be 8 months. The "**deliverable**" gives a convenient measure of project's progress.
 
 ***Months 1--2***
 
-- Documentation of use-cases.
-- Determine the feasibility of the solutions (\@ref(sec:Detail)) and make a selection.
-- **Deliverable:** We report our finding on the current state of iRODS integration at UU.
+- Start with basic package set-up with *devtools* [@devtools].
+- Follow best practices from the start of package development; e.g., documenting progress, maintaining a functioning Git main branch and usage of development branches for experimental updates. This will be published on GitHub from the start, and tags are created when milestones are hit to benefit progress tracking. In addition, unit tests are constantly developed to ensure that a particular behavior of a function is, and remains, correct (and also regularly checking code coverage of said tests). Lastly, we test code, portability, and documentation with `R CMD check` and with continuous integration provided by GitHub Workflows.
+- **Deliverable:** A GitHub repo with the basis of the package.
 
 ***Months 3--4***
 
-- Start with basic package set-up with *devtools* [@devtools], create source scripts in C++ for loading data files.
-- Follow best practices from the start of package development; e.g., documenting progress, maintaining a functioning Git master branch and usage of development branches for experimental updates. This will be published on GitHub from the start, and tags are created when milestones are hit to benefit progress tracking. In addition, unit tests are constantly developed to ensure that a particular behavior of a function is, and remains, correct (and also regularly checking code coverage of said tests). Lastly, we test code, portability, and documentation with `R CMD check` and with continuous integration provided by GitHub Workflows.
-- **Deliverable:** A GitHub repo with the basis of the package.
+- Minimal functionality to asses the integration in existing data processing pipelines.
+- **Deliverable:** A tag in the GitHub repo annotating the milestone of a functioning solution.
 
 ***Months 5--6***
 
-- Minimal functionality to ..ses.
-- **Deliverable:** A tag in the GitHub repo annotating the milestone of a functioning solution.
+- Consult user responses to earlier version (e.g. GitHub Issues) and adapt rirods accordingly.
+- Publish on CRAN.
+- Develop teaching/course materials.
+- **Deliverable:** Installable package on CRAN with documentation as vignettes and website with *pkgdown* [@pkgdown].
 
 ***Months 7--8***
 
-- Include iRODS functionality.
 - Present package at conference(s) targeting users (natural science conference) and/or developers (R or open science conference).
-- **Deliverable:** Installable package on GitHub with documentation as vignettes and website with *pkgdown* [@pkgdown].
-
-***Months 9--10***
-
-- Test use cases for the integrated R and iRODS workflows (UU).
-- **Deliverable:** A tag in the GitHub repo annotating the milestone of successful integration with iRODS.
-
-***Months 11--12***
-
-- Publish on CRAN.
-- Include usage of package in teaching/course material provided at the UU.
-- **Deliverable:** Installable package on CRAN.
+- Give workshop to inform users about *rirods* functionality and integration in data processing pipelines.
+- **Deliverable:** Video material of conference(s) and workshops.
 
 <!--
 Covering the actual delivery of the project this section should provide at least a high-level the implementation. 
@@ -62,7 +52,7 @@ Including target dates is really important as you need to be committed and the I
 
 ## Other aspects
 
-We will garner attention on the problem surrounding data management on open science, and our proposed solutions to garner these problems, through several channels (see also the timeline above). We actively seek to advertise the product by presenting our finding at conferences; either user-specific (natural science conference) and/or the developers community (e.g. R or open science conference).
+We will garner attention on the impact of data management practices on open science, and our proposed solutions to mitigate common problems, through several channels. We actively seek to advertise the product by presenting our finding at conferences; either user-specific (science conference) and/or the developer community (e.g. iRODS general user meeting). In addition, we intend to develop course material and give (online) workshops to instruct users on the usage of the R package.
 
 <!--
 Covering non-technical activities like on-going publicity, paper preparation, discussion groups etc. that might be required to facilitate successful delivery of the project.

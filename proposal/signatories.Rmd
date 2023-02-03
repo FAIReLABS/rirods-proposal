@@ -7,8 +7,8 @@ An optional section would be for R-Core signatories where changes to R are propo
 
 ## Project team
 
-**Martin Schobben**, University of Vienna, Austria    
-**Ton Smeele**, Utrecht University, Netherlands     
+**Martin Schobben**, Department of Geodesy and Geoinformation, Technical University of Vienna, Austria    
+**Ton Smeele**, Online Research Labs, Data Management, Utrecht University, Netherlands     
 **Terrell Russell**, iRODS Consortium, Chapel Hill, United States of America  
 
 *A detailed account of the individual team member's interests and skills can be found in Section \@ref(sec:people).*
@@ -24,9 +24,9 @@ Who are the people responsible for actually delivering the project if the propos
 Who are the people who have actively helped with this proposal but won't necessarily be on the core project team later?
 -->
 
-## Consulted
+<!-- ## Consulted -->
 
-**person 1**, Utrecht University, Utrecht, the Netherlands    
+<!-- **person 1**, Utrecht University, Utrecht, the Netherlands     -->
 
 <!-- 
 Who has been given the opportunity to provide feedback on the proposal? This should include any R Consortium & ISC members who the proposal has been discussed with.

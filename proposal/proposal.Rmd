@@ -6,14 +6,24 @@ This is where the proposal should be outlined.
 
 ## Overview
 
-Recently, a REpresentational State Transfer (REST)full API has been build for iRODS. REST architectures allow connecting services at global scale [@Fielding2000], as it allows clients (users) to interact with their data via a web-based architecture with the common HTTP verbs. HTTP is an interaction protocol for the Web, where verbs like GET, PUT, POST and DELETE can interact with the resource representation through a Uniform Resource Identifier (URI). This allows for a loose coupling between the datamanagment system (iRODS) and the user, which means that the consuming application does not have to be build on the same system, or even on the same operating system. Similarly to data stored on iRODS, using the web means also that the representation of the resource does not need to conform to a stringent format, and can be any, or many, formats (e.g., text, XML, and/or JSON). This user friendliness and lose coupling allows for a radical new approach to bind iRODS to R. We therefore propose to build a new R package for iRODS; *rirods2*, to replace or supplement the former package, and, which, allows for a truly distributed computing solution by using iRODS RESTfull API.
+Recently, a REpresentational State Transfer (REST)full API has been build for iRODS. REST architectures allow connecting services at global scale [@Fielding2000], as it enables clients (users) to interact with their data via a web-based architecture with the common HTTP verbs. HTTP is an interaction protocol for the Web, where verbs like GET, PUT, POST and DELETE can interact with the resource representation through a Uniform Resource Identifier (URI). This allows for a loose coupling between the datamanagment system (iRODS) and the user, which means that the consuming application does not have to be build on the same system, or even on the same operating system. Similarly to data stored on iRODS, using the web means also that the representation of the resource does not need to conform to a stringent format, and can be any, or many, formats (e.g., text, XML, and/or JSON). This user friendliness and lose coupling allows for a radical new approach to bind iRODS to R. We therefore propose to build a new R package for iRODS; *rirods*, to replace the former package, and, which, allows for a truly distributed computing solution by using iRODS RESTfull API. We foresee that this R package will allow for an integrated R workflow and iRODS data management solution that will aid open practices in e.g., science.
 
 <!--
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
 
-
 ## Detail {#sec:Detail}
+
+In order for the R package to communicate with the REST API of iRODS we make use of the libcurl library, which facilitates transfer of data over HTTP. Conveniently there already exist R wrapper packages around the libcurl library, notably: *curl* [@curl] and *httr2* [@httr2]. This makes it possible to construct a minimal dependency R solution to establish e.g., secure connections through HTTP with TLS and parallel requests (async multi-download functionality). At the side of the iRODS server, the iRODS C++ REST Mid-Tier API will handle the requests and translate them into sensible representations similar to iRODS' native iCommands. Authentication occurs through an end-point that queries the native authentication module for iRODS, which then returns an Json Web Token that allows connecting with a remote iRODS server. Future versions will also implement support for the PAM stack, which will greatly increase the configurability in terms of the authentication process.
+
+<!-- - parsing with webutils R package, JSON -->
+
+*Development:* A local iRODS server is build for convenience during development and testing of the package. For this purpose the [irods_demo](https://github.com/irods/irods_demo) Docker will be used and run as a localhost. In addition, Utrecht University will accommodate a Virtual Machine with an iRODS server to more faithfully mimic the requirements of querying a remote server. 
+
+*Unit testing:* To enable publication of *rirods* on the CRAN server, unit tests should be able to be executed without internet connection. To achieve this a mocking technique will be used that imitates HTTP responses [*httptest2* @httptest2] by saving snapshots of the "real" API's response for future comparison of test results. This process of generating mock snapshots will be automatized by integration in a GitHub Workflow so that changes in the REST API's response can be accommodated whilst performing unit tests in future stages of *rirods* development. 
+
+*Documentation:* Technical documentation will be streamlined with the usage of *roxygen2* [@roxygen2], which produces MAN pages for the newly developed functions that can be queried from the R console. In addition, long format documentation is included in the form of so-called vignettes, which can as well be consulted from the command line. In addition, the function MAN pages and vignettes will be published as a *pkgdown* website [@pkgdown] hosted with GitHub Pages and automatically updated with a designated GitHub Workflow.
+
 
 
 

@@ -5,7 +5,7 @@ Projects should have a definition of done that is measurable, and a thorough und
 
 ## Definition of done
 
-The deliverable "Installable package on CRAN" of Section \@ref(sec:Technical) defines achievement of the minimal viable product (Solution 1; Section \@ref(sec:Detail)). Progress on the implementation of Solutions 2 and/or 3 is seen as a bonus.
+The deliverable "Installable package on CRAN" of Section \@ref(sec:Technical) defines achievement of the minimal viable product (Solution 1; Section \@ref(sec:Detail)). 
 <!-- 
 What does success look like? 
 -->
@@ -21,7 +21,7 @@ How will we know when success is achieved, what markers can we use along the way
 <!-- 
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
-It will enable consulting and implementing better resources for data management in academic settins as well as help teaching efforts focussing on data management and reproducible science. In addition, we consider writing a paper concerning the package for the [Journal of Open Source Software](https://joss.theoj.org/), and continuously advertise usage of the package by actively engaging with target user-base at conferences and on social media. 
+It will enable consulting and implementing better resources for data management in academic, governmental and industrial settings as well as help teaching efforts focusing on data management and reproducible practices. In addition, we consider developing course material, give (online) workshops, and continuously advertise usage of the package by actively engaging with target user-base at conferences and on social media. 
 
 
 ## Key risks

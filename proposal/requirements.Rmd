@@ -1,6 +1,6 @@
 # Requirements
 
-The realisation of this package requires a collaborative environment that includes the potential users, and their specific requirements for processing analytical data, as well as developers and data scientist with expertise in a range of disciplines. In regards to development, we brought together a multi-disciplinary team, and consulted experts of data management, machine learning, and the integration of C++ and R.
+The realisation of this package requires a collaborative environment that includes the potential users, and their specific requirements for processing analytical data, as well as developers and data scientist with expertise in a range of disciplines. In regards to development, we brought together a multi-disciplinary team, and consulted experts of data management and the R software packaging.
 
 <!-- 
 An idea of what is required to make the project actually happen
@@ -8,7 +8,7 @@ An idea of what is required to make the project actually happen
 
 ## People {#sec:people}
 
-The project team will try to form a comprehensive picture of the current state of data management practices in laboratories through direct interaction with lab-users. In addition, they take control in all steps of development, documentation and outreach of the package. Dedicated consultants have been contacted and their expertise is regarded as an essential aid for successful deployment of the plan.
+The project team will try to form a comprehensive picture of the current state of data management practices in laboratories through direct interaction with representatives from academia, the public sector and industry. In addition, they take control in all steps of development, documentation and outreach of the package. Dedicated consultants have been contacted and their expertise is regarded as an essential aid for successful deployment of the plan.
 
 The project lead (MS) is an Earth scientist with 10 years of experience in academic research, and he has worked in several analytical laboratory facilities (MfN Berlin, University of Leeds, and Utrecht University). He also has a solid basis in data-analysis and programming with R, and has started developing packages for analysing isotope chemical data (see [point](https://martinschobben.github.io/point/)). Teaching and helping others to encode R solutions has been another of his passions, such as the development of [workshops](https://www.youtube.com/watch?v=r99jsChi4HU), and by founding of an R help desk at the UU ([uu-code-club](https://github.com/uu-code-club)).
 
@@ -20,7 +20,7 @@ Who needs to be involved, what's the proposed structure, what will it take to ge
 
 ## Processes
 
-A prime controller in the initiation ... Feedback on these early developments is sought actively through our dedicated list of consultants, but also the community at large through Twitter and other channels. Throughout this process, we will make sure that the code of conduct, as outlined in Section \@ref(sec:Start), is adhered to.
+A prime controller in the initiation of the project is early publication of the R package on GitHub. Feedback on these early developments is sought actively through our dedicated list of consultants, but also the community at large through Twitter and other channels. Throughout this process, we will make sure that the code of conduct, as outlined in Section \@ref(sec:Start), is adhered to.
 
 <!-- 
 What processes need to be put in place e.g. codes of conduct, regular ISC meetings, handover to the community at large?
@@ -28,7 +28,7 @@ What processes need to be put in place e.g. codes of conduct, regular ISC meetin
 
 ## Tools & Tech
 
-For successful delivery of the package we need a suitaable platform for testing. GitHub is essential for the collaborative character of the work. No additional computing facilities are envisioned at the moment. 
+For successful delivery of the package we need a suitable platform for development testing this will be accommodated by using Docker container as well as a Virtual Machine run on a UU server. GitHub is essential for the collaborative character of the work. 
 
 <!--
 What is going to be needed to deliver this project? 
@@ -40,16 +40,16 @@ Are there tools or tech that don't exist that will be produced to facilitate the
 
 ## Funding
 
-We request 
+We request funding for personal costs for Martin Schobben (0.5 fte) to develop, test and role-out of the rirods package.
 
 ```{r itemized, echo=FALSE, results='asis'}
-Price <- c(759, 2500)
+Price <- c(20000, 20000)
 budget <- tibble::tibble(
   Item = c(
-    "item 1", 
+    "personal cost (M Schobben)", 
     "total"
   ),
-  Currency = "$",
+  Currency = "€",
   Price = Price
 )  
 knitr::kable(budget, caption = "Itemized budget.", format.args = list(big.mark = ","))
@@ -63,7 +63,7 @@ knitr::kable(budget, caption = "Itemized budget.", format.args = list(big.mark =
 
 ## Summary
 
-Support is requested for the development, documentation as well as outreach of the package.
+Support is requested for the development, documentation as well as outreach of the *rirods* package.
 
 <!--
 A summary of the requirements that contextualises the costs

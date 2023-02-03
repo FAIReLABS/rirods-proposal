@@ -1,6 +1,6 @@
 ---
-title: RESTful iRODS for R (rirods2)
-subtitle: ISC proposal
+title: RESTful iRODS for R (rirods)
+subtitle: Proposal
 author: Martin Schobben
 date: "`r Sys.Date()`"
 output: bookdown::pdf_book
@@ -12,9 +12,9 @@ bibliography: ["proposal/uu-proposal.bib", "proposal/packages.bib"]
 knitr::opts_knit$set(warning = FALSE, message= FALSE, echo= FALSE)
 ```
 
-```{r pkgs, eval=FALSE, echo= FALSE}
+```{r pkgs, eval=FALSE, echo=FALSE}
 # run for bibtex of pkgs
-pkgs <- c("devtools") 
+pkgs <- c("devtools", "curl", "pkgdown", "httptest2", "httr2", "roxygen2") 
 rirods <- bibentry(
   key = "rirods",
   bibtype = "Misc",
@@ -22,7 +22,7 @@ rirods <- bibentry(
   author =  c("Radovan Chytracek", "Bernhard Sonderegger", "Richard Cote", "Terrell Russell"),
   year = "2015",
   url = "https://github.com/irods/irods_client_library_r_cpp/blob/master/DESCRIPTION"
-  )
+)
 knitr::write_bib(pkgs, "proposal/packages.bib", prefix = "") 
 pkgs <- bibtex::read.bib("proposal/packages.bib")
 bibtex::write.bib(
