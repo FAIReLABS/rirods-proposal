@@ -1,0 +1,54 @@
+---
+title: RESTful iRODS for R (rirods2)
+subtitle: ISC proposal
+author: Martin Schobben
+date: "`r Sys.Date()`"
+output: bookdown::pdf_book
+urlcolor: blue
+bibliography: ["proposal/uu-proposal.bib", "proposal/packages.bib"]
+---
+
+```{r setup, eval=TRUE, results='hide', echo=FALSE}
+knitr::opts_knit$set(warning = FALSE, message= FALSE, echo= FALSE)
+```
+
+```{r pkgs, eval=FALSE, echo= FALSE}
+# run for bibtex of pkgs
+pkgs <- c("devtools") 
+rirods <- bibentry(
+  key = "rirods",
+  bibtype = "Misc",
+  title = "The rirods package enables access to file objects in the iRODS data broker system from R",
+  author =  c("Radovan Chytracek", "Bernhard Sonderegger", "Richard Cote", "Terrell Russell"),
+  year = "2015",
+  url = "https://github.com/irods/irods_client_library_r_cpp/blob/master/DESCRIPTION"
+  )
+knitr::write_bib(pkgs, "proposal/packages.bib", prefix = "") 
+pkgs <- bibtex::read.bib("proposal/packages.bib")
+bibtex::write.bib(
+  purrr::reduce(list(rirods, pkgs), append), 
+  file = "proposal/packages.bib"
+)
+```
+
+`r if (knitr::is_latex_output()) "\\newpage"`
+
+```{r autodoc, child='proposal/signatories.Rmd', eval=TRUE}
+```
+
+```{r autodoc, child='proposal/problemdefinition.Rmd', eval=TRUE}
+```
+
+```{r autodoc, child='proposal/proposal.Rmd', eval=TRUE}
+```
+
+```{r autodoc, child='proposal/timeline.Rmd', eval=TRUE}
+```
+
+```{r autodoc, child='proposal/requirements.Rmd', eval=TRUE}
+```
+
+```{r autodoc, child='proposal/success.Rmd', eval=TRUE}
+```
+
+# References
