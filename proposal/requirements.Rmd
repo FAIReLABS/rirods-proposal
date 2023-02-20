@@ -40,7 +40,7 @@ Are there tools or tech that don't exist that will be produced to facilitate the
 
 ## Funding
 
-We request funding for personal costs for Martin Schobben (0.5 fte) to develop, test and role-out of the rirods package.
+We request funding for personal costs for Martin Schobben (0.2 fte) to develop, test and role-out of the rirods package.
 
 ```{r itemized, echo=FALSE, results='asis'}
 Price <- c(20000, 20000)
